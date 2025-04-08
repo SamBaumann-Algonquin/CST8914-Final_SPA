@@ -115,12 +115,12 @@
     const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/; 
 
     if (!phonePattern.test(phoneInput)) {
-      alert("❗ Please enter a valid phone number in the format: (123) 456-7890");
+      alert(" Please enter a valid phone number in the format: (123) 456-7890");
       document.getElementById("phone").focus();
       return;
     }
     else
-    alert("✅ Thank you for reaching out! We’ll contact you soon.");
+    alert("Thank you for reaching out! We’ll contact you soon.");
     this.reset();
   });
 
