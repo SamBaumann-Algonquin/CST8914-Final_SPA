@@ -39,3 +39,30 @@ window.addEventListener("DOMContentLoaded", () => {
   const hash = window.location.hash.substring(1);
   if (hash) updateFocus(hash);
 });
+
+
+function updateFocus(id) { ... }
+function announce(message) { ... }
+function toggleSwitch(element) { ... }
+function toggleSwitchKey(event, element) { ... }
+
+const modal = document.getElementById("communityModal");
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+openModalBtn.addEventListener("click", () => {
+  modal.setAttribute("aria-hidden", "false");
+  modal.querySelector(".modal-content").focus();
+});
+
+closeModalBtn.addEventListener("click", () => {
+  modal.setAttribute("aria-hidden", "true");
+  openModalBtn.focus();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.getAttribute("aria-hidden") === "false") {
+    modal.setAttribute("aria-hidden", "true");
+    openModalBtn.focus();
+  }
+});
