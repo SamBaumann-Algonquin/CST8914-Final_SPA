@@ -1,66 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Foster understanding and promote inclusive digital experiences for all">
-    <meta name="author" content="">
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Custom styles for Empower Ability Labs -->
-    <link rel="stylesheet" href="EmpowerAbilityLab.css"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Empower Ability Labs</title>
+  <link rel="stylesheet" href="EmpowerAbilityLab.css" />
+</head>
+<body>
 
-  </head>
+  <!-- Navigation with Logo -->
+  <nav>
+    <div class="nav-container">
+      <img src="D:\Cloud Developing\Sem 1\Acessible by design\Project\logo.png" alt="Empower Ability Labs Logo" class="logo" />
+      <ul>
+        <li><a href="#home" onfocus="updateFocus('home')">Home</a></li>
+        <li><a href="#services" onfocus="updateFocus('services')">Services</a></li>
+        <li><a href="#schedule" onfocus="updateFocus('schedule')">Schedule a Call</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <body>
-<div  class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="https://www.google.ca/">Empower Ability Labs Logo here</a>
-    <!-- Main Navigation for Empower Ability Labs-->
-    <nav> 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+  <!-- Home Section -->
+  <section id="home" tabindex="-1">
+    <h1>Welcome to Empower Ability Labs</h1>
+    <p>
+        Welcome to <strong>Empower Ability Labs</strong>, where empathy meets innovation. We are dedicated to helping organizations, educators, developers, and designers create digital experiences that are inclusive, equitable, and accessible to all.
+        </p>
+        
+        <p>
+        In today’s fast-paced digital world, accessibility is not just a requirement — it’s a responsibility. Our goal is to raise awareness and foster a deep understanding of the challenges that individuals with disabilities face when interacting with technology. Through immersive experiences, hands-on workshops, real-user testing, and impactful storytelling, we help teams see the world through a different lens.
+        </p>
+        
+        <p>
+        At Empower Ability Labs, we offer a unique approach to accessibility. Our services are designed to be interactive, thought-provoking, and actionable. Whether you're attending one of our <strong>Empathy Lab Days</strong>, inviting an <strong>inspirational speaker</strong>, or conducting <strong>usability testing</strong> with people who use assistive technologies, you’ll walk away with practical insights that improve both your products and your perspective.
+        </p>
+        
+        <p>
+        We believe that digital inclusion is everyone’s responsibility. By combining accessibility standards like <strong>WCAG 2.1 AA</strong> with real-world scenarios and lived experiences, we help you move beyond checkboxes and toward meaningful impact.
+        </p>
+        
+        <p>
+        Whether you’re new to accessibility or already building inclusive solutions, we’re here to support your journey. Together, we can create technology that not only works for everyone — but truly empowers everyone.
+        </p>
+        
+        <p>
+        Explore our services, connect with our community, and join the movement for a more inclusive digital future. Because when we design with empathy, we build with purpose.
+        </p>
+  </section>
 
-      </div>
-    </nav>
-  </div>
-    <main>
-      <!-- Main landing view -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="h2">Welcome to Empower Ability Labs!</h1>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+  <!-- Services Section -->
+  <section id="services" tabindex="-1">
+    <h2>Our Services</h2>
+    <img src="D:\Cloud Developing\Sem 1\Acessible by design\Project\services.png" alt="Collage of accessibility and usability workshops" class="service-img" />
+    <p>
+        At <strong>Empower Ability Labs</strong>, our services are designed to help you build more inclusive, accessible, and human-centered digital experiences. We go beyond compliance to help you understand the real-world impact of accessibility and inclusion.
+        </p>
+        
+        <h3>Empathy Lab Days & Workshops</h3>
+        <p>
+        Our <strong>Empathy Lab Days</strong> and workshops provide hands-on experiences that immerse participants in the everyday challenges faced by people with disabilities. Using simulations, assistive technologies, and interactive learning, these sessions foster a deep sense of empathy, while empowering your team to build with inclusivity in mind. These are perfect for developers, designers, educators, and anyone seeking to strengthen their understanding of digital accessibility.
+        </p>
+        
+        <h3>Inspirational Speakers</h3>
+        <p>
+        Bring accessibility to life through powerful storytelling. Our <strong>Inspirational Speaker Series</strong> connects you with individuals from the disability community who share their lived experiences, challenges, and triumphs. These sessions are designed to inspire, educate, and build empathy across your organization, making inclusion not just a goal—but a shared value.
+        </p>
+        
+        <h3>Usability Testing with Real Users</h3>
+        <p>
+        Our <strong>Usability Testing</strong> service connects your team with people who use screen readers, alternative navigation, or other assistive tech. You'll get authentic, actionable feedback from individuals with different abilities, helping you uncover accessibility issues early in the design and development process. We support testing at every stage of your product lifecycle — from wireframes to live apps.
+        </p>
+        
+        <p>
+        No matter where you are on your accessibility journey, Empower Ability Labs provides the tools, training, and human connection to help you succeed. Let’s make inclusion your innovation.
+        </p>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" tabindex="-1">
+    <h2>Schedule a Call</h2>
+    <form id="contactForm">
+      <label for="businessName">Business Name:</label>
+      <input type="text" id="businessName" name="businessName" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email (required):</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">What would you like to talk about?</label>
+      <select id="message" name="message" required>
+        <option value="">Select an option</option>
+        <option value="workshops">Awareness lab days and workshops</option>
+        <option value="speaker">Invite a speaker</option>
+        <option value="testing">Usability testing</option>
+      </select>
+
+      <label for="eventDetails">Tell us about your event:</label>
+      <textarea id="eventDetails" name="eventDetails" required></textarea>
+
+      <!-- Accessible Toggle Switch -->
+      <div class="toggle-container">
+        <div id="emailSwitch" class="toggle-switch" role="switch" tabindex="0" aria-checked="false"
+          onclick="toggleSwitch(this)" onkeydown="toggleSwitchKey(event, this)" aria-label="Receive email updates">
+          <div class="toggle-thumb"></div>
         </div>
+        <label id="emailSwitchLabel">Receive email updates</label>
       </div>
 
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-          
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
-          </div>
-          <div class="col-md-4">
-          
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
-          </div>
-          <div class="col-md-4">
-          
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo. </p>
-          </div>
-        </div>
+      <button type="submit">Schedule a Call</button>
+    </form>
+  </section>
 
-        <hr>
+  <!-- Screen reader live region -->
+  <div id="ariaAnnouncer" class="sr-only" aria-live="polite"></div>
 
-      </div> <!-- /container -->
+  <footer>
+    <p>© Empower Ability Labs Inc. All rights reserved.</p>
+  </footer>
 
-    </main>
-
-    <footer class="container">
-     <p>Copyright Accessible Knowledge Base 2023</p>
-    </footer>
-
-
-
-    <script src="EmpowerAbilityLab.js"></script>
-  
-
-</body></html>
+  <script src="EmpowerAbilityLab.js"></script>
+</body>
+</html>
