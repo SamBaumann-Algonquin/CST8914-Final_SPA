@@ -35,17 +35,21 @@ function toggleSwitchKey(event, element) {
   }
 }
 
+function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  const isExpanded = navLinks.classList.toggle("show");
+
+  // ARIA toggle for accessibility
+  const hamburger = document.querySelector('.hamburger');
+  hamburger.setAttribute('aria-expanded', isExpanded);
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   const hash = window.location.hash.substring(1);
   if (hash) updateFocus(hash);
 });
 
-
-function updateFocus(id) { ... }
-function announce(message) { ... }
-function toggleSwitch(element) { ... }
-function toggleSwitchKey(event, element) { ... }
-
+// Modal logic
 const modal = document.getElementById("communityModal");
 const openModalBtn = document.getElementById("openModalBtn");
 const closeModalBtn = document.getElementById("closeModalBtn");
@@ -66,3 +70,30 @@ document.addEventListener("keydown", (e) => {
     openModalBtn.focus();
   }
 });
+
+// Toggle logic
+function toggleSwitch(element) {
+  const email = document.getElementById("email");
+  const isChecked = element.getAttribute("aria-checked") === "true";
+
+  if (!email.value || !email.value.includes("@")) {
+    alert("Please enter a valid email address before enabling updates.");
+    email.focus();
+    return;
+  }
+
+  const newValue = !isChecked;
+  element.setAttribute("aria-checked", newValue);
+}
+
+function toggleSwitchKey(event, element) {
+  if (event.key === " " || event.key === "Enter") {
+    event.preventDefault();
+    toggleSwitch(element);
+  }
+}
+
+function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("show");
+}
