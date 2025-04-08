@@ -8,12 +8,12 @@
 </head>
 <body>
 
- 
+  <!-- Navigation with Logo -->
   <nav>
   <div class="nav-container">
     <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" class="logo" />
 
-   
+    <!-- Hamburger button for mobile -->
     <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
       ☰
     </button>
@@ -28,7 +28,7 @@
 </nav>
 
 
- 
+  <!-- Home Section -->
   <section id="home" tabindex="-1">
     <h1>Welcome to Empower Ability Labs</h1>
      <p>
@@ -79,7 +79,7 @@
 </table>
 </div>
 
-
+<!-- Modal -->
      <div id="communityModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
       <div class="modal-content" role="document" tabindex="-1">
         <div class="modal-header">
@@ -127,7 +127,7 @@
   </p>
   </section>
 
- 
+  
   <section id="schedule" tabindex="-1">
     <h2>Schedule a Call</h2>
       <img src="images/scheduleacall.png" alt="Person scheduling a call on a laptop" class="schedule-img" />
@@ -167,6 +167,7 @@
         <textarea id="eventDetails" name="eventDetails" required></textarea>
       </div>
       
+      <!-- Accessible Toggle Switch -->
       <div class="toggle-container">
         <div id="emailSwitch" class="toggle-switch" role="switch" tabindex="0" aria-checked="false"
           onclick="toggleSwitch(this)" onkeydown="toggleSwitchKey(event, this)" aria-label="Receive email updates">
@@ -179,7 +180,7 @@
     </form>
   </section>
 
-  
+  <!-- Screen reader live region -->
   <div id="ariaAnnouncer" class="sr-only" aria-live="polite"></div>
 
   <footer>
