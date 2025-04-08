@@ -146,15 +146,26 @@
       <input type="email" id="email" name="email" required>
 
       <fieldset>
-          <legend>What would you like to talk about?</legend>
-          <label><input type="radio" name="topic" value="workshops" required /> Awareness lab days  and workshops</label><br />
-          <label><input type="radio" name="topic" value="testing" /> Invite a speaker with disabilities to your event</label><br />
-          <label><input type="radio" name="topic" value="awareness" /> Usability testing </label>
-        </fieldset>
-
-      <label for="eventDetails">Tell us about your event:</label>
-      <textarea id="eventDetails" name="eventDetails" required></textarea>
-
+        <legend>What would you like to talk about?</legend>
+        <label>
+          <input type="radio" name="topic" value="workshops" required />
+          Awareness lab days and workshops
+        </label><br />
+        <label>
+          <input type="radio" name="topic" value="speaker" />
+          Invite a speaker with disabilities to your event
+        </label><br />
+        <label>
+          <input type="radio" name="topic" value="usability" />
+          Usability testing
+        </label>
+      </fieldset>
+      
+      
+      <div id="eventDetailsContainer" style="display: none;">
+        <label for="eventDetails">Tell us about your event:</label>
+        <textarea id="eventDetails" name="eventDetails" required></textarea>
+      </div>
       
       <div class="toggle-container">
         <div id="emailSwitch" class="toggle-switch" role="switch" tabindex="0" aria-checked="false"
