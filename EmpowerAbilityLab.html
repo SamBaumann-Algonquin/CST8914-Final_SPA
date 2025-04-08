@@ -10,15 +10,23 @@
 
   <!-- Navigation with Logo -->
   <nav>
-    <div class="nav-container">
-      <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" class="logo" />
-      <ul>
-        <li><a class = "nav-link" href="#home" onfocus="updateFocus('home')">Home</a></li>
-        <li><a class = "nav-link" href="#services" onfocus="updateFocus('services')">Services</a></li>
-        <li><a class = "nav-link" href="#schedule" onfocus="updateFocus('schedule')">Schedule a Call</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="nav-container">
+    <img src="logo.png" alt="Empower Ability Labs Logo" class="logo" />
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onfocus="updateFocus('home')" class="nav-menu">Home</a></li>
+      <li><a href="#services" onfocus="updateFocus('services')" class="nav-menu">Services</a></li>
+      <li><a href="#schedule" onfocus="updateFocus('schedule')" class="nav-menu">Schedule a Call</a></li>
+    </ul>
+  </div>
+</nav>
+
 
   <!-- Home Section -->
   <section id="home" tabindex="-1">
@@ -28,76 +36,75 @@
     We offer a range of services designed to promote accessibility awareness, drive inclusivity, and enhance the user experience.
     And help you find answers on <strong>How do people with disabilities use technology and navigate the digital world? What tools do they employ?</strong>
   </p>
+  <button id="openModalBtn" class="btn-primary">Meet the Empower Community!</button>
+    <br/> <br/>
 
-  <p>
-    <!-- Trigger Button -->
-<button id="openModalBtn" class="btn-primary">Meet the Empower Community!</button>
+  <table class="info-table">
+  <thead>
+    <tr>
+      <th>Our Approach</th>
+      <th>Services</th>
+      <th>Testimonials</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <p>
+          Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy.
+          Our immersive workshops and lab days provide participants with a unique opportunity to step
+          into the shoes of individuals with disabilities and navigate the digital world.
+        </p>
+        <a href="https://www.google.com/search/howsearchworks/our-approach/" class="learn-more" target="_blank" rel="noopener noreferrer"><b>Learn more</b></a>
+      </td>
+      <td>
+        Promote accessibility awareness and enhance the user experience.
+        <ul>
+          <li>Empathy lab days and workshops</li>
+          <li>Go beyond WCAG compliance!</li>
+          <li>Inspirational speakers.</li>
+        </ul>
+        <a href="https://www.elevenways.be/en/services" class="learn-more" target="_blank" rel="noopener noreferrer"><b>Learn more</b></a>
+      </td>
+      <td>
+        <p>
+          Invite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will 
+          offer insights that resonate, inspire, educate, and enrich your team’s understanding of inclusion.
+        </p>
+        <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" class="learn-more" target="_blank" rel="noopener noreferrer"><b>Learn more</b></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<!-- Accessible Modal Dialog -->
-<div id="communityModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-  <div class="modal-content" role="document" tabindex="-1">
-    <div class="modal-header">
-      <h2 id="modalTitle">Community Steering Committee</h2>
-      <button class="close-button" id="closeModalBtn" aria-label="Close dialog">×</button>
-    </div>
-    <div class="modal-body">
-      <p>
-        We get <strong>aha!</strong> moments from product managers who try our services for the first time.
-        We offered many lab days, workshops, and usability testing services to many companies and organizations, including:
-      </p>
-      <ul>
-        <li>McGill University</li>
-        <li>Walmart.ca</li>
-        <li>Apple.ca</li>
-        <li>Google.ca</li>
-        <li>Government of Canada</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-  <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-    <thead style="background-color: #f0f0f0;">
-      <tr>
-        <th>Our Approach</th>
-        <th>Services</th>
-        <th>Testimonials</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy.
-             Our immersive workshops and lab days provide participants with a unique opportunity to step
-             into the shoes of individuals with disabilities and navigate the digital world. </p>
-          <a href="https://www.google.com/search/howsearchworks/our-approach/" class="learnMore" target="_blank" rel="noopener noreferrer">Learn
-            more</a>
-        </td>
-        <td>
-          Promote accessibility awareness and enhance the user experience.
+<!-- Modal -->
+     <div id="communityModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-content" role="document" tabindex="-1">
+        <div class="modal-header">
+          <h2 id="modalTitle">Community Steering Committee</h2>
+          <button class="close-button" id="closeModalBtn" aria-label="Close dialog">×</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            We get <strong>aha!</strong> moments from product managers who try our services for the first time. We offered lab days, workshops, and usability testing to organizations including:
+          </p>
           <ul>
-            <li>Empathy lab days and workshops</li>
-            <li>Go beyond WCAG compliance!</li>
-            <li>Inspirational speakers.</li>
+            <li>McGill University</li>
+            <li>Walmart.ca</li>
+            <li>Apple.ca</li>
+            <li>Google.ca</li>
+            <li>Government of Canada</li>
           </ul>
-          <a href="https://www.elevenways.be/en/services" class="learnMore" target="_blank" rel="noopener noreferrer">Learn more</a>
-        </td>
-        <td>
-          <p>Invite a speaker with disabilities to share their unique journey. This captivating addition to your upcoming event will 
-             offer insights that resonate, inspire, educate, and enrich your team’s understanding of inclusion.</p>
-        <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial" class="learnMore"
-            target="_blank" rel="noopener noreferrer">Learn more</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </div>
+      </div>
+    </div>
+  
   </section>
 
   <!-- Services Section -->
   <section id="services" tabindex="-1">
     <h2>Our Services</h2>
-    <img src="images/services.png" alt="Collage of accessibility and usability workshops" class="service-img" />
+    <img src="services.png" alt="Collage of accessibility and usability workshops" class="service-img" />
     <p>
     Dedicated space or programs designed to cultivate empathy and understanding among individuals toward the challenges faced by people with disabilities in using technology and interacting with various environments.
   </p>
@@ -121,7 +128,7 @@
   <!-- Schedule Section -->
   <section id="schedule" tabindex="-1">
     <h2>Schedule a Call</h2>
-      <img src="images/scheduleacall.png" alt="Person scheduling a call on a laptop" class="schedule-img" />
+      <img src="scheduleacall.png" alt="Person scheduling a call on a laptop" class="schedule-img" />
   <p>
     At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive experiences. Fill out the form below and we’ll get back to you as soon as we can to schedule a call with our sales team!
   </p>
@@ -136,13 +143,12 @@
       <label for="email">Email (required):</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="message">What would you like to talk about?</label>
-      <select id="message" name="message" required>
-        <option value="">Select an option</option>
-        <option value="workshops">Awareness lab days and workshops</option>
-        <option value="speaker">Invite a speaker</option>
-        <option value="testing">Usability testing</option>
-      </select>
+      <fieldset>
+          <legend>What would you like to talk about?</legend>
+          <label><input type="radio" name="topic" value="workshops" required /> Awareness lab days  and workshops</label><br />
+          <label><input type="radio" name="topic" value="testing" /> Invite a speaker with disabilities to your event</label><br />
+          <label><input type="radio" name="topic" value="awareness" /> Usability testing </label>
+        </fieldset>
 
       <label for="eventDetails">Tell us about your event:</label>
       <textarea id="eventDetails" name="eventDetails" required></textarea>
