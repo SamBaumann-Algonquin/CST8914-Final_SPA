@@ -7,8 +7,8 @@ body {
 }
 
 a {
-  color: white;
-  text-decoration: none;
+  color: black;
+  text-decoration: underline;
 }
 
 h1, h2, h3 {
@@ -26,7 +26,7 @@ section {
 
 /* Navigation */
 nav {
-  background-color: #003366;
+  background-color: ##a4ebed;
   padding: 1rem 0;
   color: white;
 }
@@ -59,7 +59,7 @@ nav ul li a {
 
 
 .nav-link{
-  color: white;
+  color: black;
 }
 
 .logo {
