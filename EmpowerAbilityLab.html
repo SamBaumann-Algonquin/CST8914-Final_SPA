@@ -7,28 +7,32 @@
   <link rel="stylesheet" href="EmpowerAbilityLab.css" />
 </head>
 <body>
+  <a href="#home" class="skip-link">Skip to main content</a>
 
-  <!-- Navigation with Logo -->
-  <nav>
-  <div class="nav-container">
-    <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" class="logo" />
+  <header>
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <img src="images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" class="logo" />
+  
+        
+        <button class="hamburger" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false" onclick="toggleMenu()" onkeydown="handleHamburgerKey(event)">
+          ☰
+        </button>
+  
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-menu">Home</a></li>
+          <li><a href="#services" class="nav-menu">Services</a></li>
+          <li><a href="#schedule" class="nav-menu">Schedule a Call</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
 
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
-      ☰
-    </button>
-
-    <!-- Navigation Links -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" onfocus="updateFocus('home')" class="nav-menu">Home</a></li>
-      <li><a href="#services" onfocus="updateFocus('services')" class="nav-menu">Services</a></li>
-      <li><a href="#schedule" onfocus="updateFocus('schedule')" class="nav-menu">Schedule a Call</a></li>
-    </ul>
-  </div>
-</nav>
+  
 
 
-  <!-- Home Section -->
+  
   <section id="home" tabindex="-1">
     <h1>Welcome to Empower Ability Labs</h1>
      <p>
@@ -52,7 +56,9 @@
     <tr>
       <td>
         <p>
-          Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. Our immersive workshops and lab days provide participants with a unique opportunity to step into the shoes of individuals with disabilities and navigate the world from their perspective.
+          Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy.
+          Our immersive workshops and lab days provide participants with a unique opportunity to step
+          into the shoes of individuals with disabilities and navigate the digital world.
         </p>
         <a href="https://www.google.com/search/howsearchworks/our-approach/" class="learn-more" target="_blank" rel="noopener noreferrer"><b>Learn more</b></a>
       </td>
@@ -77,7 +83,7 @@
 </table>
 </div>
 
-<!-- Modal -->
+
      <div id="communityModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
       <div class="modal-content" role="document" tabindex="-1">
         <div class="modal-header">
@@ -86,7 +92,7 @@
         </div>
         <div class="modal-body">
           <p>
-            We get an <strong>aha!</strong> moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and organizations including:
+            We get <strong>aha!</strong> moments from product managers who try our services for the first time. We offered lab days, workshops, and usability testing to organizations including:
           </p>
           <ul>
             <li>McGill University</li>
@@ -121,7 +127,7 @@
 
   <h3>Usability testing</h3>
   <p>
-   Go beyond WCAG! Involve individuals with disabilities in usability testing to gather valuable insights for refining product strategy and identifying accessibility concerns at an early stage when solutions are more feasible and cost-effective. You have access to a diverse community of people with disabilities, who use various assistive technologies. With technical expertise ranging from novice to expert, our community can support your product lifecycle from user research, to design, to QA.
+    Go beyond WCAG! Involve individuals with disabilities in usability testing to gather valuable insights for refining product strategy and identifying accessibility concerns at an early stage when solutions are more feasible and cost-effective. You have access to a diverse community of people with disabilities, who use various assistive technologies. With technical expertise ranging from novice to expert, our community can support your product lifecycle from user research, to design, to QA.
   </p>
   </section>
 
@@ -165,7 +171,7 @@
         <textarea id="eventDetails" name="eventDetails" required></textarea>
       </div>
       
-      <!-- Accessible Toggle Switch -->
+      
       <div class="toggle-container">
         <div id="emailSwitch" class="toggle-switch" role="switch" tabindex="0" aria-checked="false"
           onclick="toggleSwitch(this)" onkeydown="toggleSwitchKey(event, this)" aria-label="Receive email updates">
@@ -178,11 +184,11 @@
     </form>
   </section>
 
-  <!-- Screen reader live region -->
+  
   <div id="ariaAnnouncer" class="sr-only" aria-live="polite"></div>
 
   <footer>
-    <p>© Copyright Empower Ability Labs Inc 2023. All rights reserved</p>
+    <p>© Empower Ability Labs Inc. All rights reserved.</p>
   </footer>
 
   <script src="EmpowerAbilityLab.js"></script>
