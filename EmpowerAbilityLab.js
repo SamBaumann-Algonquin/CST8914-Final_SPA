@@ -99,12 +99,6 @@ function toggleMenu() {
 }
 
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault(); 
-  alert("✅ Thank you for reaching out! We’ll contact you soon.");
-  this.reset(); 
-});
-
-document.getElementById("contactForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
   const phoneInput = document.getElementById("phone").value.trim();
@@ -119,3 +113,10 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   alert("✅ Thank you for reaching out! We’ll contact you soon.");
   this.reset();
 });
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); 
+  alert("✅ Thank you for reaching out! We’ll contact you soon.");
+  this.reset(); 
+});
+
