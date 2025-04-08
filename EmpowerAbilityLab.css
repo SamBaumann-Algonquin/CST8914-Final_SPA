@@ -26,9 +26,11 @@ section {
 
 /* Navigation */
 nav {
-  background-color: #bfebe4;
+  background-color: #003366; /* dark blue */
   padding: 1rem;
+  color: white;
 }
+
 .nav-link{
   color: black;
 }
