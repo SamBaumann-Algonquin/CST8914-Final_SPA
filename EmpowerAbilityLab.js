@@ -39,7 +39,7 @@ function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
   const isExpanded = navLinks.classList.toggle("show");
 
-  // ARIA toggle for accessibility
+  
   const hamburger = document.querySelector('.hamburger');
   hamburger.setAttribute('aria-expanded', isExpanded);
 }
@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (hash) updateFocus(hash);
 });
 
-// Modal logic
+
 const modal = document.getElementById("communityModal");
 const openModalBtn = document.getElementById("openModalBtn");
 const closeModalBtn = document.getElementById("closeModalBtn");
@@ -71,7 +71,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Toggle logic
+
 function toggleSwitch(element) {
   const email = document.getElementById("email");
   const isChecked = element.getAttribute("aria-checked") === "true";
@@ -97,3 +97,10 @@ function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
   navLinks.classList.toggle("show");
 }
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); 
+  alert("✅ Thank you for reaching out! We’ll contact you soon.");
+  this.reset(); 
+});
+
