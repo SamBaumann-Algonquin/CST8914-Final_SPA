@@ -56,6 +56,69 @@ nav ul li {
   margin: 0;
 }
 
+/* Modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.close-button {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #c82333;
+}
+
+.modal-body p {
+  margin-top: 1rem;
+}
+
+.modal-body ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+
 /* Services Image */
 .service-img {
     float: right;
