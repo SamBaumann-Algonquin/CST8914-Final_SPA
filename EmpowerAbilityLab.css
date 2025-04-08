@@ -30,7 +30,7 @@ section {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* Navigation */
+
 nav {
   background-color: #003366;
   padding: 1rem;
@@ -49,7 +49,7 @@ nav {
   height: 50px;
 }
 
-/* Services Image */
+
 .service-img {
     float: right;
     width: 200px;
@@ -68,7 +68,7 @@ nav {
       max-width: 300px;
     }
   }
-  /* Right-aligned schedule image */
+  
 .schedule-img {
     float: right;
     width: 200px;
@@ -90,7 +90,7 @@ nav {
   }
   
 
-/* Form */
+
 form {
   display: flex;
   flex-direction: column;
@@ -128,7 +128,7 @@ button:hover {
   background-color: #0055a5;
 }
 
-/* Toggle switch */
+
 .toggle-container {
   display: flex;
   align-items: center;
@@ -165,7 +165,7 @@ button:hover {
   transform: translateX(25px);
 }
 
-/* Accessibility */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -185,7 +185,7 @@ footer {
   font-size: 0.9rem;
 }
 
-  /* Modal */
+ 
   .modal {
     display: none;
     position: fixed;
@@ -227,7 +227,7 @@ footer {
   }
 
 a.learn-more {
-  color: #66ccff;               /* Light blue by default */
+  color: #66ccff;               
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -235,7 +235,7 @@ a.learn-more {
 
 a.learn-more:hover,
 a.learn-more:focus {
-  color: #003366;               /* Dark blue on hover/focus */
+  color: #003366;               
   text-decoration: underline;
   outline: none;
 }
@@ -282,7 +282,7 @@ a.learn-more:focus {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Hamburger button */
+
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -328,3 +328,18 @@ nav ul.nav-links li {
   }
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #003366;
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 10px;
+}
