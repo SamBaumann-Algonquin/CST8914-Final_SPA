@@ -39,7 +39,7 @@ function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
   const isExpanded = navLinks.classList.toggle("show");
 
-  
+  // ARIA toggle for accessibility
   const hamburger = document.querySelector('.hamburger');
   hamburger.setAttribute('aria-expanded', isExpanded);
 }
@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (hash) updateFocus(hash);
 });
 
-
+// Modal logic
 const modal = document.getElementById("communityModal");
 const openModalBtn = document.getElementById("openModalBtn");
 const closeModalBtn = document.getElementById("closeModalBtn");
@@ -71,7 +71,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-
+// Toggle logic
 function toggleSwitch(element) {
   const email = document.getElementById("email");
   const isChecked = element.getAttribute("aria-checked") === "true";
@@ -102,7 +102,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   event.preventDefault();
 
   const phoneInput = document.getElementById("phone").value.trim();
-  const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/; 
+  const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/; // (123) 456-7890
 
   if (!phonePattern.test(phoneInput)) {
     alert("❗ Please enter a valid phone number in the format: (123) 456-7890");
@@ -120,3 +120,28 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   this.reset(); 
 });
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const radioButtons = document.querySelectorAll('input[name="topic"]');
+  const eventDetailsContainer = document.getElementById("eventDetailsContainer");
+  const eventDetailsTextarea = document.getElementById("eventDetails");
+
+  // Hide textarea initially
+  eventDetailsContainer.style.display = "none";
+  eventDetailsTextarea.removeAttribute("required");
+
+  // Listen to changes on the radio group
+  radioButtons.forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "speaker" && radio.checked) {
+        eventDetailsContainer.style.display = "block";
+        eventDetailsTextarea.setAttribute("required", true);
+      } else {
+        eventDetailsContainer.style.display = "none";
+        eventDetailsTextarea.removeAttribute("required");
+        eventDetailsTextarea.value = "";
+      }
+    });
+  });
+});
