@@ -26,20 +26,40 @@ section {
 
 /* Navigation */
 nav {
-  background-color: #003366; /* dark blue */
-  padding: 1rem;
+  background-color: #003366;
+  padding: 1rem 0;
   color: white;
 }
 
-.nav-link{
-  color: black;
-}
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+
+.nav-link{
+  color: black;
 }
 
 .logo {
