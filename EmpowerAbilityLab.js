@@ -104,3 +104,18 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   this.reset(); 
 });
 
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const phoneInput = document.getElementById("phone").value.trim();
+  const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/; 
+
+  if (!phonePattern.test(phoneInput)) {
+    alert("❗ Please enter a valid phone number in the format: (123) 456-7890");
+    document.getElementById("phone").focus();
+    return;
+  }
+
+  alert("✅ Thank you for reaching out! We’ll contact you soon.");
+  this.reset();
+});
